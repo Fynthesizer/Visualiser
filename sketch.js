@@ -26,6 +26,7 @@ function preload(){
 
 function setup() {
     cnv = createCanvas(windowWidth, windowHeight, P2D);
+    cnv.mouseOut(mouseOut);
 
     angleMode(DEGREES);
     colorMode(HSB,100);
