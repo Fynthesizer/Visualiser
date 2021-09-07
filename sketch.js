@@ -83,7 +83,7 @@ function draw() {
     //Background
     var bgAlpha = map(blur,0,1,100,1);
     blendMode(BLEND);
-    background(58.33,31,25,bgAlpha);
+    background(58.33,31,15,bgAlpha);
     
     blendMode(ADD);
     translate(width/2,height/2);
