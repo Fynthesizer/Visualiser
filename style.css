@@ -1,0 +1,139 @@
+:root {
+--bg: #2c3640;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.settings {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  left: 30px;
+  top: 30px;
+  padding: 10px;
+  height:100%;
+  transition: .5s;
+  opacity: 1;
+}
+
+.settings.hidden {
+  opacity: 0;
+  left: -300px;
+}
+
+.settings > input, .settings > button {
+  margin: 5px;
+}
+
+.input::-webkit-file-upload-button {
+display:none;
+}
+
+.input::-webkit-file-upload-button{
+  content: 'Upload Track';
+}
+
+.input::-webkit-file-upload-button, .play {
+  color: white;
+  border: 1px solid white;
+  border-radius: 0px;
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: transparent;
+  white-space: nowrap;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  transition: .2s;
+}
+
+.input:hover::-webkit-file-upload-button, .play:hover {
+  color: var(--bg);
+  background-color: white;
+  border-radius: 0px;
+}
+
+input[type="range"]{
+  -webkit-appearance: none;  
+  appearance: none;
+  width: 100%; 
+  height: 1px; 
+  background: white; 
+  outline: none; 
+  opacity: 1; 
+  -webkit-transition: .2s; 
+  transition: .2s;
+  margin: 15px 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 20px;
+  height: 20px; 
+  background: var(--bg);
+  -webkit-transition: .2s; 
+  transition: .2s;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+input[type="range"]::-moz-range-thumb{
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 20px;
+  height: 20px; 
+  background: var(--bg);
+  -webkit-transition: .2s; 
+  transition: .2s;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  background: white;
+  border-radius: 100%;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  -webkit-appearance: none; 
+  background: white;
+  border-radius: 100%;
+}
+
+.modes {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.modes label {
+  display: none;
+}
+
+input[type="radio"]{
+  -webkit-appearance: none;  
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 1px solid white;
+  transition: .2s;
+  margin: 10px 5px;
+}
+
+input[type="radio"]:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="radio"]:checked{
+  background-color: white;
+}
