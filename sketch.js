@@ -78,8 +78,8 @@ function draw() {
     dotScale = dotScaleSlider.value();
     mode = modeSelect.value();
     
-    if (guiTimer > 0 && sound.isPlaying) guiTimer --;
-    else if (guiTimer <= 0 && showGui == true && mouseX > 200 && mouseY > 300) toggleGui(false);
+    if (guiTimer > 0 && sound.isPlaying()) guiTimer --;
+    else if (guiTimer <= 0 && showGui == true) toggleGui(false);
     
     //Background
     var bgAlpha = map(blur,0,1,100,1);
@@ -151,7 +151,7 @@ function mouseDragged(){
 }
 
 function mouseOut(){
-    if (showGui == true) toggleGui(false);
+    if (showGui == true && sound.isPlaying()) toggleGui(false);
 }
 
 function toggleGui(state){
