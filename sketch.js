@@ -1,11 +1,11 @@
 var rotateRate = 0.05;
 var currentHue = 0;
-var blur = 0;
+var blur = 0.75;
 var bands = 2048;
 var octaveBands = 3;
-var minDots = 5;
+var minDots = 6;
 var smoothing = 0.5;
-var dotScale = 0.033;
+var dotScale = 0.08;
 var globalScale = 0.66;
 var hueOffset = 40;
 var mode = 1;
@@ -21,7 +21,7 @@ var guiTimer = timerLength;
 var showGui = true;
 
 function preload(){
-  sound = loadSound('forest.wav');
+  sound = loadSound('default.wav');
 }
 
 function setup() {
@@ -47,22 +47,22 @@ function setup() {
     playToggle.mousePressed(togglePlay);
     playToggle.addClass("play");
     playToggle.parent(settings);
-    blurSlider = createSlider(0,0.75,0,0);
+    blurSlider = createSlider(0,0.75,0.5,0);
     blurSlider.parent(settings);
     speedSlider = createSlider(0,0.3,0.05,0);
     speedSlider.parent(settings);
-    dotsSlider = createSlider(3,10,5,1);
+    dotsSlider = createSlider(3,10,6,1);
     dotsSlider.parent(settings);
     scaleSlider = createSlider(0.1,1,0.66,0);
     scaleSlider.parent(settings);
-    dotScaleSlider = createSlider(0.02,0.1,0.05,0);
+    dotScaleSlider = createSlider(0.02,0.1,0.08,0);
     dotScaleSlider.parent(settings);
     modeSelect = createRadio();
     modeSelect.addClass("modes");
     modeSelect.option(0,'');
     modeSelect.option(1,'');
     modeSelect.option(2,'');
-    document.getElementsByClassName("modes")[0].children[0].checked = true;
+    document.getElementsByClassName("modes")[0].children[2].checked = true;
     modeSelect.parent(settings);
 }
 
