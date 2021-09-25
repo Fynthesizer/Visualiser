@@ -21,7 +21,7 @@ var guiTimer = timerLength;
 var showGui = true;
 
 function preload(){
-  sound = loadSound('default.wav');
+  sound = loadSound('default.mp3');
 }
 
 function setup() {
